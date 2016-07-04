@@ -1,7 +1,7 @@
 require 'active_record'
 
 class TodoList < ActiveRecord::Base
-  has_many :todos
+  has_many :todos, dependent: :destroy
 
   # @description: adds a new todo item to the DB under this list
   def create_list_item(text)
