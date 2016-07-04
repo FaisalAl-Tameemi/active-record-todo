@@ -27,7 +27,7 @@ class App
       case cmd
       when 'q'
         break
-      else
+      when 'pry'
         binding.pry
       end
     end

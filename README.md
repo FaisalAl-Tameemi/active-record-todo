@@ -21,6 +21,7 @@ The code for interacting with the database must be placed within the models. For
 3. Show a given list's total progress (percentage completion of all items within list)
 4. Add a new todo item to a given list.
 5. Mark a todo item as completed.
+6. Create a new todo list.
 
 **Remember:** Each of the objectives listed above must have their own REPL commands. And the `app.rb` shouldn't include any database specific logic, rather should leverage code within the two classes used instead.
 
