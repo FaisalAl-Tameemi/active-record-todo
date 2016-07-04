@@ -1,5 +1,6 @@
 require 'active_record'
 require 'pp'
+require 'pry'
 # require the models for the todo list app
 require_relative './todo_list'
 require_relative './todo'
@@ -26,8 +27,8 @@ class App
       case cmd
       when 'q'
         break
-      when 'other_command'
-        # TODO: implement other commands
+      else
+        binding.pry
       end
     end
   end
