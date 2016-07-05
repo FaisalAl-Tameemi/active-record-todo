@@ -1,36 +1,24 @@
-require 'active_record'
+# require 'active_record'
 require 'pp'
 require 'pry'
-# require the models for the todo list app
-require_relative './todo_list'
-require_relative './todo'
 
-# @description: connect to a database, postgres is used below
-ActiveRecord::Base.establish_connection(
-  adapter: 'postgresql',
-  username: 'faisal', # change this depending on your postgresql user configs
-  database: 'active_record_todo'
-)
+# ActiveRecord::Base.establish_connection(
+#   adapter: 'postgresql',
+#   username: 'faisal', # change this depending on your postgresql user configs
+#   database: 'active_record_todo'
+# )
 
 class App
 
   def initialize
     # TODO: implement
+    puts "A new app has been initialized"
   end
 
-  # @description: starts a REPL to add/search/delete/update todos in the DB
   def run
-    while true
-      puts '** Welcome to the Active Record Todo App **'
-      puts 'Please enter a command:'
-      cmd = gets.chomp
-      case cmd
-      when 'q'
-        break
-      when 'pry'
-        binding.pry
-      end
-    end
+    # TODO: implement
+    puts "App is running..."
+    puts "Not to do yet :("
   end
 
 end
