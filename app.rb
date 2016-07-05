@@ -10,7 +10,7 @@ class App
   def initialize
     # @description: connect to a database, postgres is used below
     @conn = App.connect
-    # App.build_schema
+    App.build_schema
   end
 
   # @description: starts a REPL to add/search/delete/update todos in the DB
@@ -40,21 +40,21 @@ class App
   end
 
   # @description: a class method to build the database schema
-  # def self.build_schema
-  #   ActiveRecord::Schema.define do
-  #     # create the todo lists table
-  #     create_table :todo_lists, force: true do |table|
-  #       table.string :title
-  #     end
-  #
-  #     # create the todo items table
-  #     create_table :todos, force: true do |table|
-  #       table.text :text
-  #       table.boolean :status
-  #       table.integer :todo_list_id
-  #     end
-  #   end
-  # end
+  def self.build_schema
+    ActiveRecord::Schema.define do
+      # create the todo lists table
+      create_table :todo_lists, force: true do |table|
+        table.string :title
+      end
+
+      # create the todo items table
+      create_table :todos, force: true do |table|
+        table.text :text
+        table.boolean :status
+        table.integer :todo_list_id
+      end
+    end
+  end
 
 end
 
